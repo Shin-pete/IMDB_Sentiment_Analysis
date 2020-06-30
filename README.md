@@ -4,3 +4,4 @@ Nowadays there is such a vast amount of data available to people, certainly too 
 
 [My_notebook](https://nbviewer.jupyter.org/github/Shin-pete/IMDB_Sentiment_Analysis/blob/master/LSTM_model.ipynb)
 
+[My_notebook](https://nbviewer.jupyter.org/github/Shin-pete/IMDB_Sentiment_Analysis/blob/master/LSTM_model.ipynb)
