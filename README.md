@@ -6,7 +6,7 @@ Nowadays there is such a vast amount of data available to people, certainly too 
 
 Step by step procedure: 
 
-Today we will be looking at deep learning and learn about how we can use deep learning and natural language processing to try to create a system that can read a user's review and analyze whether they found the film to be a positive or negative experience. We first begin by importing our necessary databases as well as pandas. ​
+Today we will be looking at deep learning and discover how we can use deep learning and natural language processing to try to create an algorithm that can analyze a user's review to infer whether the reviewer found it to be a positive or negative experience. We first begin by importing our necessary databases as well as pandas. 
 
 ![dataframe](https://arpitbajpai.weebly.com/uploads/1/1/7/2/117229466/mparbwd_1_orig.png)
 
