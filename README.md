@@ -14,7 +14,7 @@ We then concatenate our two dataframes and then begin the process of cleaning an
 
 ![df_list](https://arpitbajpai.weebly.com/uploads/1/1/7/2/117229466/nndswj5_1_orig.png)
 
-Now that we have properly cleaned the dataset, we can move on to the business of exploring the data more and gaining some insights. First, to do this, we will run a loop through our entire set of reviews and append each instance of a word showing up into a list. Our next step is to import and use the counter to count how many times each word was used in our 50000 reviews. 
+Now that we have properly cleaned the dataset, we can move on to the business of exploring the data more and gaining some insights. First, to do this, we will run a loop through our entire set of reviews and append each instance of a word showing up into a list. Our next step is to import and use the counter to measure how many times each word was used in our 50000 reviews. 
 
 Unfortunately, we come to see that this isn't immediately useful because of all the filler words used in the reviews. Words like 'the', 'and', 'a' and 'of' are used far more frequently than terms that provide actual insights about the films we are watching and the terminology people may be used to talk about and describe them.
 
