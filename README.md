@@ -19,3 +19,19 @@ Now that we have properly cleaned the dataset, we can move on to the business of
 Unfortunately, we come to see that this isn't immediately useful because of all the filler words used in the reviews. Words like 'the', 'and', 'a' and 'of' are used far more frequently than terms that provide actual insights about the films we are watching and the terminology people may be used to talk about and describe them.
 
 ![viz_0](https://arpitbajpai.weebly.com/uploads/1/1/7/2/117229466/hv6blgt_1_orig.png)
+
+So the next thing we're going to do is get rid of all the stopwords. and to do this, we will import stopwords from nltk.corpus and set the stopwords to be in English. Once that is done, we're going to take the previous list and whenever we find an instance of a stopword in that list, we will remove it. Once this is done, we will run the counter on our new list to get a sense of what words are most common and actually provide useful insights. Once that is done, we get to see that the actually most often used words in the set are terms like 'movie' and 'film'. Another thing we can notice here is that things like 'good' and 'great' and 'better' and 'best' are used quite frequently whereas the only word for describing a negative characteristic is 'bad'. To me, this suggests that when people are talking up a film, they tend to use pretty similar terms and when they are criticizing a film, the terminology seems to be more diverse as bad is the only 'negative' term in the top 50 most used terms.
+
+![viz_1](https://arpitbajpai.weebly.com/uploads/1/1/7/2/117229466/o2viij6_1_orig.png)
+
+We can then look to word vectorization to gain some more insights into how IMDB users tend to review films. To do that, we run a word2vec model over our list of cleaned words to see what we can learn. We see that when an individual mentions editing, the words most similar to it are also things that tend to have to do with technical aspects of filmmaking like lighting and camerawork. On the other hand, words like 'story' are most similar to terms like 'plot' and 'tale' and 'narrative' and other terms there to describe the events of the story. 
+
+![viz_2](https://arpitbajpai.weebly.com/uploads/1/1/7/2/117229466/ho4yu5u_1_orig.png)
+
+Now that we have a good idea of what our data is like, we can now look at beginning the modeling process. Let's begin by importing the necessary libraries. We then create our y variable for our model by getting the 0s or 1s from the dataset that are there and set them to our y variable. Let's start with a pretty basic model and see how it performs. 
+
+![viz_3](https://arpitbajpai.weebly.com/uploads/1/1/7/2/117229466/xbclvry_1_orig.png)
+
+Not bad! Our model had a validation accuracy of .9008, and to think that it took only 2 epochs. Let's see how increasing the number of epochs will affect validation accuracy. And it seems like it significantly decreases the accuracy down to .86, and we see that taking it to 20 has an even more negative effect, going as far down as to .83. Instead of trying to randomly find the configuration that works best, let's try to find the optimal set of conditions and for this, we will run a grid search that optimizes for epochs and batch size. 
+
+![viz_4](https://arpitbajpai.weebly.com/uploads/1/1/7/2/117229466/wu8mpjw_1_orig.png)
